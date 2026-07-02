@@ -4,7 +4,7 @@ let model;
 
 async function setupCamera() {
     try{
-        const stream = await navigator.mediaDevices.getDisplayMedia({
+        const stream = await navigator.mediaDevices.getUserMedia({
             video: {facingMode: 'environment' },
             audio: false
         });
