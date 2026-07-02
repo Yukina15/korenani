@@ -20,11 +20,11 @@ async function initAI() {
     await setupCamera();
 
     try{
-        model = await mobilent.load({ version: 2, alpha: 1.0 });
-        // statusDiv.innerText ="準備完了！カメラに物を映してください。";
+        model = await mobilenet.load({ version: 2, alpha: 1.0 });
+        statusDiv.innerText ="準備完了！カメラに物を映してください。";
         predictLoop();
     } catch (e) {
-        // statusDiv.innerText = "AIの読み込みに失敗しました:" + e.message;
+        statusDiv.innerText = "AIの読み込みに失敗しました:" + e.message;
         console.error(e);
     }
 }
